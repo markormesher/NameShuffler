@@ -1,5 +1,5 @@
 // settings
-var timerLength = 30 * 60; // 30 minutes
+var timerLength = 20; // 30 minutes
 var shuffleSpeed = 150;
 var hints = [
 	[0, "Massive congratulations to:"],
