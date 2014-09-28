@@ -1,5 +1,5 @@
 // settings
-var timerLength = 20; // 30 minutes
+var timerLength = 30;
 var shuffleSpeed = 150;
 var hints = [
 	[0, "Massive congratulations to:"],
@@ -20,6 +20,16 @@ var maxName = 0;
 var clockDisplay, nameHintDisplay, nameDisplay;
 
 $(document).ready(function () {
+	// get the initial value
+	var checkAgain = true;
+	while (checkAgain) {
+		var givenValue = prompt("How long should the timer run? (in seconds)");
+		if (!isNaN(parseInt(givenValue))) {
+			timerLength = parseInt(givenValue);
+			checkAgain = false;
+		}
+	}
+
 	// get page elements
 	clockDisplay = $(".clock");
 	nameHintDisplay = $(".name_hint");
@@ -55,7 +65,7 @@ function updateClockDisplay() {
 	var seconds = currentClock % 60;
 	var minutes = ((currentClock - seconds) / 60) % 60;
 	var hours = (currentClock - seconds - (minutes * 60)) / (60 * 60);
-	clockDisplay.html((hours < 10 ? "0" : "") + hours + ":" + (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds)
+	clockDisplay.html((hours < 10 ? "0" : "") + hours + ":" + (minutes < 10 ? "0" : "") + minutes + ":" + (seconds < 10 ? "0" : "") + seconds);
 
 	// hint display
 	for (var i = 0; i < hints.length; ++i) {
