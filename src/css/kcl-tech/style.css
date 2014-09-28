@@ -1,0 +1,41 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+body {
+	background-color: #03395d;
+	background-image: url('bg.jpg');
+	background-position: center bottom;
+	background-size: cover;
+}
+
+p {
+	font-family: Roboto, Calibri, "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+
+p.clock {
+	font-size: 13em;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+p.name_hint, p.clock_hint {
+	font-size: 5em;
+	color: #ededed;
+}
+
+p.name {
+	font-size: 13em;
+	font-weight: bold;
+}
+
+.clock_highlight {
+	color: #089bfd;
+}
