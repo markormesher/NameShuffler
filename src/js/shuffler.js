@@ -1,11 +1,11 @@
 // settings
-var timerLength = 30;
+var timerLength;
 var shuffleSpeed = 150;
 var hints = [
 	[0, "Massive congratulations to:"],
 	[5, "Nearly there..."],
 	[10, "Getting close..."],
-	[timerLength, "Who's it going to be?"]
+	[9007199254740992, "Who's it going to be?"] // max int in JS
 ];
 var clockHighlightAt = 10;
 var finalNameFlashSpeed = 600;
