@@ -37,16 +37,16 @@ function setWinnerDisplayMode(winnerDisplay) {
 			{pulses: -1}
 		);
 
-		// start up again in 60 seconds
+		// start up again in 120 seconds
 		setTimeout(function () {
 			lastWinnerText.html("Last winner: <strong>" + currentName + "</strong>");
-		}, 5 * 1000);
+		}, 119 * 1000);
 		setTimeout(function () {
 			nameText.pulse('destroy');
 			if (!shuffleFinished) shuffleEnabled = true;
 			nameCycle();
 			setWinnerDisplayMode(false);
-		}, 6 * 1000);
+		}, 120 * 1000);
 	}
 }
 
